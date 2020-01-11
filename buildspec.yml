@@ -1,13 +1,14 @@
 version: 0.2
 env:
   parameter-store:
-    DATABASE_PASSWORD: "/CodeBuild/grafana/rds"
+    DATABASE_PASSWORD: "/CodeBuild/grafana/string"
 phases:
   install:
     runtime-versions:
       docker: 18
   pre_build:
     commands:
+      - echo $DATABASE_PASSWORD
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
   build:
