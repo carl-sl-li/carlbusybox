@@ -1,7 +1,7 @@
 version: 0.2
 env:
   parameter-store:
-    DATABASE_PASSWORD: "/CodeBuild/grafana/string"
+    DATABASE_PASSWORD: "SDBPassword"
 phases:
   install:
     runtime-versions:
