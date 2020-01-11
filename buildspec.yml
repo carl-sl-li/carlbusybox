@@ -1,5 +1,7 @@
 version: 0.2
-
+env:
+  parameter-store:
+    DATABASE_PASSWORD: "/CodeBuild/grafana/rds"
 phases:
   install:
     runtime-versions:
